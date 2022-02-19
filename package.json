@@ -1,0 +1,45 @@
+{
+  "name": "flipr-nobel-prizer-assign",
+  "version": "1.0.0",
+  "description": "Display nobel prizers and achievers",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx webpack-dev-server --mode development --open --hot",
+    "build": "npx webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandyhari/Flipr-nobel-prizer-assign.git"
+  },
+  "keywords": [
+    "React",
+    "Javascript",
+    "Html",
+    "Css"
+  ],
+  "author": "Srihari Boda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandyhari/Flipr-nobel-prizer-assign/issues"
+  },
+  "homepage": "https://github.com/sandyhari/Flipr-nobel-prizer-assign#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.3",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
+    "html-loader": "^3.1.0",
+    "react-hot-loader": "^4.13.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
