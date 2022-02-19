@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: ["regenerator-runtime/runtime.js", "./src/index.js"],
   mode: "development",
   module: {
     rules: [
@@ -14,18 +14,25 @@ module.exports = {
         },
       },
       {
-        test: /\.html$/,
-        use: "html-loader",
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(scss|sass)$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.(jpg|png|svg)$/,
+        loader: "url-loader",
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[hash].[ext]",
+        },
       },
     ],
   },
 
   // options for resolving module reqests
-  resolve: { extensions: ["*", ".js", ".jsx"] },
+  resolve: { extensions: ["*", ".js", ".jsx", ".css"] },
 
   //telling webpack where it should bundle out the results
   output: {
